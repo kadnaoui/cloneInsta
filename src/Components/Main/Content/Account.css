@@ -68,6 +68,9 @@ hr{
         width: 7em;
         height: 7em;
     }
+    .Account{
+        width: 85%;
+    }
     .Profile{
         padding-inline: 2em;
     }
