@@ -82,12 +82,19 @@ hr{
     }
     
     @media (width<450px) {
+        .Account{
+            width: 90%;
+        }
+        .Account-details{
+            height: 60%
+        }
         .Account-image>img{
             width: 6em;
             height: 6em;
         }
         .Profile{
-            padding-inline: 1em;
+            padding-inline: 0em;
+            height: 10em
         }
         .details{
             font-size: 1em;}
