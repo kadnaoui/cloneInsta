@@ -7,8 +7,8 @@ export const Account = (props) => {
     const Account = props.account;
     const follow = () => {
         let followers = user.followers;
-        if (followers.find(x => x.id == users.id)) { addFollow(followers.filter(x => x.id != users.id), user.id); }
-        else { followers.push({ id: users.id }); addFollow(followers, user.id); }
+        if (followers.find(x => x.id == Account)) { addFollow(followers.filter(x => x.id != Account), user.id); }
+        else { followers.push({ id: Account }); addFollow(followers, user.id); console.log(user); }
     }
     const y = pubs.filter(x => x.userId == Account)
 
@@ -30,7 +30,7 @@ export const Account = (props) => {
                     <img src={x.profileImage ? x.profileImage : df}></img>
                 </div>
                 <div className='Account-details'>
-                    <div className='details'> {x.username} {user.id != Account ? (<a className='follow' style={{ color: 'blue', cursor: 'pointer' }} onClick={follow}>{user.followers.find(x => x.id == users.id) ? 'Unfollow' : 'Follow'}</a>) : ''}</div>
+                    <div className='details'> {x.username} {user.id != Account ? (<a className='follow' style={{ color: 'blue', cursor: 'pointer' }} onClick={follow}>{user.followers.find(x => x.id == Account) ? 'Unfollow' : 'Follow'}</a>) : ''}</div>
                     <div className='details'>
                         <div>Posts <span><b>{y.length}</b></span></div>
                         <div>following <span><b>{x.followers.length}</b></span></div>
