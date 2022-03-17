@@ -1,0 +1,330 @@
+body {
+    font-family: sans-serif;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 14px;
+  }
+  
+  .box {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    flex-grow: 1;
+  }
+  
+  .heading {
+    margin: 22px auto 12px;
+    background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_b20f2a3cd7e4.png/b20f2a3cd7e4.png");
+    background-position: -98px 0;
+    height: 51px;
+    width: 177px;
+    overflow: hidden;
+  }
+  
+  .field {
+    margin: 10px 0;
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+  
+  .input {
+    padding: 9px 0px 7px 9px;
+    font-size: 12px;
+    width: 16rem;
+    height: 1.2rem;
+    outline: none;
+    background: #fafafa;
+    border-radius: 3px;
+    border: 1px solid #efefef;
+  }
+  
+  /* label intial position*/
+  
+  .label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    padding-bottom: 15px;
+    transform: translateY(10px);
+    line-height: 6px;
+    transition: all ease-out 0.1s;
+    font-size: 14px;
+    color: #999;
+    padding-top: 6px;
+  }
+  
+  /* hiding placeholder in all browsers */
+  
+  .input::placeholder {
+    visibility: hidden;
+  }
+  
+  
+  
+  /* label final position */
+  .input:not(:placeholder-shown) + label {
+    transform: translateY(0);
+    font-size: 11px;
+  }
+  
+  /* .input padding increases if placeholder is not shown */
+  .input:not(:placeholder-shown) {
+    padding-top: 14px;
+    padding-bottom: 2px;
+  }
+  
+  .login-button {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    background-color: #3897f0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    margin-top: 6px;
+  }
+  
+  .separator .line {
+    height: 1px;
+    width: 40%;
+    background-color: #dbdbdb;
+  }
+  
+  .other {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fb-login-btn,.fb-login-btn2 {
+    margin: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #385185;
+    font-weight: 600;
+    background: transparent;
+  }
+
+  .fb-login-btn2 {
+      margin: 0;
+  }
+  
+  .fb-icon {
+    color: #385185;
+    font-size: 1rem;
+    padding-right: 1px;
+  }
+
+  
+  .signup {
+    color: #3897f0;
+    font-weight: 600;
+  }
+  #span2{
+ position: absolute;
+ right: 5%;
+ top: 25%;
+ cursor: pointer;
+}
+.singin_h1{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+    color: #8e8e8e;
+}
+/*8888888888888888888888888888888888*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+
+
+.container2 {
+  width: 80%;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin:1em;
+}
+
+.top_bar {
+  padding-right: 1.5em;
+  padding-left: 1em;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile_img img {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile_img span {
+  margin-left: 50px;
+}
+
+.main_img {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 15px;
+}
+
+.main_img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.icons2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.icons2 .fa {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icons2 .left_side .fa {
+  margin: 0px 3px;
+  color: #010101;
+}
+
+.left_side{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.likeCount p {
+  color: #010101;
+  font-size: 14px;
+}
+
+.content p {
+  padding: 5px 0;
+}
+
+
+
+.comments_box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 0.5em;
+}
+
+
+.input_field {
+  width: 100%;
+}
+
+.input_field input {
+  width: 100%;
+  padding: 10px;
+  border: none !important;
+  outline: none;
+}
+
+.btn button {
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #207be2;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn button:disabled{
+  cursor: unset;
+  
+  color: #207be275;
+}
+
+.controleComments{
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 600;
+}
+
+b{
+  font-weight:600;
+}
+.profilImg2{
+  height: 4.5em;
+  display: flex;
+  align-items: center;
+}
+.userInfos{
+  display: flex;
+  align-items: center;
+}
