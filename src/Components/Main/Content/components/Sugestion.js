@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const Sugestion = (props) => {
-    const { users, addFollow, user, df, setAccount } = props;
+    const { users, addFollow, user, df, setAccount, account } = props;
 
 
     const follow = () => {
 
         let followers = user.followers;
-        if (followers.find(x => x.id == users.id)) { addFollow(followers.filter(x => x.id != users.id), user.id); }
-        else { followers.push({ id: users.id }); addFollow(followers, user.id); }
+        if (followers.find(x => x.id == users.id)) { addFollow(followers.filter(x => x.id != users.id), account); }
+        else { followers.push({ id: users.id }); addFollow(followers, account); }
 
 
 

@@ -22,11 +22,23 @@ export const Signinp = (props) => {
         if (Signin.username && Signin.password && Signin.Email && Signin.full_name) {
             let username = Signin.username.toLowerCase();
             let email = Signin.Email.toLowerCase();
+            let full_name = Signin.full_name.toLowerCase();
             let l = users.length + 1;
             if (users) {
                 let r = users.find((u) => u.email.toLowerCase() == email || u.username.toLowerCase() == username);
 
-                if (!r) { setUsers([...users, { id: l, ...Signin, email: Signin.Email, profileImage: '' }]); setUser({ username: username, id: l }) }
+                if (!r) {
+                    setUsers([...users, { id: l, ...Signin, email: Signin.Email, profileImage: '' }]); setUser({
+                        id: l,
+                        username: username,
+                        fullname: full_name,
+                        email: email,
+                        password: 'x',
+                        profileImage: '',
+                        followers: []
+
+                    })
+                }
                 else setRed(true)
             }
             else setRed(true)
