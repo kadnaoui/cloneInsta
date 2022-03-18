@@ -2,7 +2,7 @@ import React from 'react'
 import { Sugestion } from './components/Sugestion';
 import { AuthContext } from '../../../Contexts/authContext';
 const Sugestions = (props) => {
-    const { user, users, addFollow, df, setAccount } = React.useContext(AuthContext);
+    const { user, users, addFollow, df } = React.useContext(AuthContext);
 
 
 

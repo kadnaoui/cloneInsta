@@ -32,8 +32,6 @@ const Content = (props) => {
     }
     const displayStories = () => {
         return user.followers.map((c) => s(c))
-        // const n = pubs.filter((c) => c.stories.length > 0 && c.follow.find(f => f.id == user.id))
-        //return n.map((c) => (<Storie key={c.id} infos={c} Eddit={Eddit} />))
     }
     const displaySug = () => {
         let x = users.filter((c) => c.id != user.id);

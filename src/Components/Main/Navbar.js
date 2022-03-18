@@ -5,6 +5,7 @@ export const Navbar = (props) => {
     const { logout, user, df, setAccount } = props;
     const [selected, setSelected] = React.useState(0);
     const [search, setSearch] = React.useState('');
+    console.log(user);
     return (
         <nav className="navigation">
             <div className="logo">

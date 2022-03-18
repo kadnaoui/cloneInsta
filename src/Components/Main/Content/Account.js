@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/authContext'
 import './Account.css'
 
@@ -16,9 +17,11 @@ export const Account = (props) => {
     const displayPosts = (y) => {
         return y.map(x => {
             return (
-                <div key={x.id} className='post_image'>
+                <Link className='post_image' key={x.id} to='/post' onClick={() => props.setPost(x)}>
+
                     <img src={x.pubImage} />
-                </div>
+
+                </Link>
             )
         })
     }

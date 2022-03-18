@@ -32,9 +32,13 @@ export const Time = (infos) => {
         return x + ' mins'
     }
 }
-export const LikeOp = (infos, user, Eddit, idd) => {
+export const LikeOp = (infos, user, Eddit, idd, n = 0) => {
     let Likes = infos.pubs.likes;
     Likes.find(x => x.id == user.id) ? Likes = Likes.filter(x => x.id != user.id) : Likes.push({ id: user.id });
 
+    // console.log(Likes);
     Eddit({ ...infos, pubs: { ...infos.pubs, likes: Likes } }, idd);
+    if (n) { console.log({ ...infos, pubs: { ...infos.pubs, likes: Likes } }); }
+
+
 }

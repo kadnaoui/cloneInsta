@@ -63,6 +63,12 @@
 hr{
     width: 100%;color: black;
 }
+.co{
+    margin-top: 4em;
+    width: 70%;
+ margin-inline: auto;
+  
+}
 @media (width<750px) {
     .Account-image>img{
         width: 7em;
