@@ -8,7 +8,7 @@ import './Style.css';
 export const AuthApp = () => {
     const [Login, setLogin] = React.useState({ username: "", password: "" });
 
-    const [Signin, setSignin] = React.useState({ Email: "", full_name: "", username: "", password: "" });
+    const [Signin, setSignin] = React.useState({ email: "", fullname: "", username: "", password: "" });
     return (
         <BrowserRouter>
             <Routes>

@@ -22,7 +22,6 @@ const Content = (props) => {
         })
     }
     const displayPubs = () => {
-
         return user.followers.map((c) => p(c))
     }
     const displayStories = () => {

@@ -6,8 +6,10 @@ import { Other } from "./Components/Other";
 import { Field } from "./Components/Field";
 import { Box } from "./Components/Box";
 import { Button } from "./Components/Button";
+import { useNavigate } from "react-router-dom";
 
 export const Signinp = (props) => {
+    let navigate = useNavigate();
     const { setUsers, users, setUser } = React.useContext(AuthContext);
     const { Signin, setSignin } = props;
     const [Red, setRed] = React.useState(false);
@@ -19,25 +21,26 @@ export const Signinp = (props) => {
     }
     const onSubmit = (e) => {
         e.preventDefault();
-        if (Signin.username && Signin.password && Signin.Email && Signin.full_name) {
+        if (Signin.username && Signin.password && Signin.email && Signin.fullname) {
             let username = Signin.username.toLowerCase();
-            let email = Signin.Email.toLowerCase();
-            let full_name = Signin.full_name.toLowerCase();
+            let email = Signin.email.toLowerCase();
+            let fullname = Signin.fullname.toLowerCase();
             let l = users.length + 1;
             if (users) {
                 let r = users.find((u) => u.email.toLowerCase() == email || u.username.toLowerCase() == username);
 
                 if (!r) {
-                    setUsers([...users, { id: l, ...Signin, email: Signin.Email, profileImage: '' }]); setUser({
+                    setUsers([...users, { id: l, ...Signin, email: Signin.email, profileImage: '', followers: [] }]); setUser({
                         id: l,
                         username: username,
-                        fullname: full_name,
+                        fullname: fullname,
                         email: email,
                         password: 'x',
                         profileImage: '',
                         followers: []
 
                     })
+                    navigate("/", { replace: true });
                 }
                 else setRed(true)
             }
@@ -55,22 +58,22 @@ export const Signinp = (props) => {
                     <Other title='Log in with Facebook' icon="fa fa-facebook-official fb-icon" />
                     <Separator />
                     <Field
-                        id='full_name'
+                        id='fullname'
                         type='text'
                         placeholder='Full name'
                         onChange={onChange}
                         label='Full Name'
-                        value={Signin.full_name}
+                        value={Signin.fullname}
                         toggle={false}
                         Red={Red}
                     />
                     <Field
-                        id='Email'
+                        id='email'
                         type='text'
                         placeholder='Phone number, username, or email'
                         onChange={onChange}
                         label='Phone number, username, or email'
-                        value={Signin.Email}
+                        value={Signin.email}
                         toggle={false}
                         Red={Red}
                     />
@@ -96,7 +99,7 @@ export const Signinp = (props) => {
                         Red={Red} />
 
                     <Button title='Sign in'
-                        disabled={(Signin.username != '' && Signin.password != '' && Signin.full_name != '' && Signin.Email != '') ? false : true}
+                        disabled={(Signin.username != '' && Signin.password != '' && Signin.fullname != '' && Signin.email != '') ? false : true}
                     />
                 </form>
             </div>

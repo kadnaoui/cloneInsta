@@ -4,8 +4,11 @@ import { AuthContext } from '../../../Contexts/authContext'
 import './Account.css'
 
 export const Account = (props) => {
+
+
     const { users, user, addFollow, df, pubs } = React.useContext(AuthContext);
     const Account = props.account;
+
     const follow = () => {
         let followers = user.followers;
         if (followers.find(x => x.id == Account)) { addFollow(followers.filter(x => x.id != Account), user.id); }
