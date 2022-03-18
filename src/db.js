@@ -102,30 +102,17 @@ export const pubsdb = [
         id: 333,
         userId: 5,
         pubImage: 'https://121quotes.com/wp-content/uploads/2020/03/cr7-wallpaper-683x1024.jpg',
-        description: "Proud to overcome one more challenge by becoming the World’s Clubs Top Goal Scorer, only 6 months after becoming the World’s International Top Goal Scorer.Nothing but respect for Romário, one of the best strikers of all time! Thanks to all the players that I’ve come across throughout my career, thanks to all the clubs that I represented, thanks to all my fans, and above all, thanks to my wonderful family.I couldn’t have done it without you! 👏🏽🙏🏽",
+        description: "👏🏽🙏🏽",
 
         pubs: {
 
             likes: [
-                { id: 1 },
-                {
-                    id: 2
-                }
+
             ],
             comments: [{
                 id: 1,
                 user: 'reda',
                 text: "nice picture "
-            },
-            {
-                id: 2,
-                user: 'amin',
-                text: "hey Mark missed you man!"
-            },
-            {
-                id: 3,
-                user: 'youcef',
-                text: "Gg my Boy"
             }],
             time: '2022-01-09-17-05'
         }
@@ -136,31 +123,17 @@ export const pubsdb = [
         id: 332,
         userId: 5,
         pubImage: 'https://static.onzemondial.com/8/2022/03/photo_article/765969/301201/1200-L-manchester-united-tottenham-le-missile-de-cristiano-ronaldo.jpg',
-        description: "Proud to overcome one more challenge by becoming the World’s Clubs Top Goal Scorer, only 6 months after becoming the World’s International Top Goal Scorer.Nothing but respect for Romário, one of the best strikers of all time! Thanks to all the players that I’ve come across throughout my career, thanks to all the clubs that I represented, thanks to all my fans, and above all, thanks to my wonderful family.I couldn’t have done it without you! 👏🏽🙏🏽",
+        description: "Proud ",
 
         pubs: {
 
-            likes: [
-                { id: 1 },
+            likes: [{ id: 2 }],
+            comments: [
                 {
-                    id: 2
-                }
-            ],
-            comments: [{
-                id: 1,
-                user: 'reda',
-                text: "nice picture "
-            },
-            {
-                id: 2,
-                user: 'amin',
-                text: "hey Mark missed you man!"
-            },
-            {
-                id: 3,
-                user: 'youcef',
-                text: "Gg my Boy"
-            }],
+                    id: 1,
+                    user: 'amin',
+                    text: "hey Mark missed you man!"
+                }],
             time: '2022-01-09-17-05'
         }
 
@@ -170,7 +143,7 @@ export const pubsdb = [
         id: 334,
         userId: 5,
         pubImage: 'https://121quotes.com/wp-content/uploads/2020/03/cr7-wallpaper-683x1024.jpg',
-        description: "Proud to overcome one more challenge by becoming the World’s Clubs Top Goal Scorer, only 6 months after becoming the World’s International Top Goal Scorer.Nothing but respect for Romário, one of the best strikers of all time! Thanks to all the players that I’ve come across throughout my career, thanks to all the clubs that I represented, thanks to all my fans, and above all, thanks to my wonderful family.I couldn’t have done it without you! 👏🏽🙏🏽",
+        description: "the World’s Clubs Top Goal Scorer",
 
         pubs: {
 
@@ -184,16 +157,6 @@ export const pubsdb = [
                 id: 1,
                 user: 'reda',
                 text: "nice picture "
-            },
-            {
-                id: 2,
-                user: 'amin',
-                text: "hey Mark missed you man!"
-            },
-            {
-                id: 3,
-                user: 'youcef',
-                text: "Gg my Boy"
             }],
             time: '2022-01-09-17-05'
         }
@@ -204,7 +167,7 @@ export const pubsdb = [
         id: 335,
         userId: 5,
         pubImage: 'https://static.onzemondial.com/8/2022/03/photo_article/765969/301201/1200-L-manchester-united-tottenham-le-missile-de-cristiano-ronaldo.jpg',
-        description: "Proud to overcome one more challenge by becoming the World’s Clubs Top Goal Scorer, only 6 months after becoming the World’s International Top Goal Scorer.Nothing but respect for Romário, one of the best strikers of all time! Thanks to all the players that I’ve come across throughout my career, thanks to all the clubs that I represented, thanks to all my fans, and above all, thanks to my wonderful family.I couldn’t have done it without you! 👏🏽🙏🏽",
+        description: "6 months after becoming the World’s International Top Goal Scorer",
 
         pubs: {
 
@@ -218,16 +181,6 @@ export const pubsdb = [
                 id: 1,
                 user: 'reda',
                 text: "nice picture "
-            },
-            {
-                id: 2,
-                user: 'amin',
-                text: "hey Mark missed you man!"
-            },
-            {
-                id: 3,
-                user: 'youcef',
-                text: "Gg my Boy"
             }],
             time: '2022-01-09-17-05'
         }

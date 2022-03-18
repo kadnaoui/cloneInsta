@@ -17,14 +17,9 @@ const Content = (props) => {
 
     }
     const p = (c) => {
-        for (let index = 0; index < pubs.length; index++) {
-
-            const element = pubs[index];
-            if (element.userId == c.id) return (<Publications key={element.id} infos={element} Eddit={Eddit} user={user} users={users} setAccount={props.setAccount} />)
-
-
-        }
-
+        return pubs.map(p => {
+            if (p.userId == c.id) { return (<Publications key={p.id} infos={p} Eddit={Eddit} user={user} users={users} setAccount={props.setAccount} />) }
+        })
     }
     const displayPubs = () => {
 
