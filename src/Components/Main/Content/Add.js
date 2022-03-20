@@ -8,27 +8,29 @@ export const Add = (props) => {
     let navigate = useNavigate();
     const onSubmit = e => {
         e.preventDefault();
-        const current = new Date();
+        if (img) {
+            const current = new Date();
 
 
-        const x = {
+            const x = {
 
-            id: pubs.length,
-            userId: user.id,
-            pubImage: img,
-            description: des,
+                id: pubs.length,
+                userId: user.id,
+                pubImage: img,
+                description: des,
 
-            pubs: {
-                likes: [],
-                comments: [],
-                time: `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}-${current.getHours()}-${current.getMinutes()}`
+                pubs: {
+                    likes: [],
+                    comments: [],
+                    time: `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}-${current.getHours()}-${current.getMinutes()}`
+                }
             }
-        }
-        const newpubs = pubs;
-        newpubs.push(x);
-        setPubs(newpubs);
+            const newpubs = pubs;
+            newpubs.push(x);
+            setPubs(newpubs);
 
-        navigate("/account", { replace: true });
+            navigate("/account", { replace: true });
+        }
     }
     const onChange = e => {
         const reader = new FileReader();
