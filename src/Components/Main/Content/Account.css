@@ -117,3 +117,19 @@ hr{
             width: 100%;
         }
     }
+    .add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+.upload {
+    max-width:60%;
+ max-height:60%
+
+}
+.addButton{
+    margin: 1em;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import df from '../../../du.png'
 
 export const TopBar = (props) => {
     const { userId, users, setAccount } = props;
@@ -7,7 +8,7 @@ export const TopBar = (props) => {
     return (
         <div className="top_bar">
             <div className="profile_img">
-                <img src={user.profileImage}
+                <img src={user.profileImage ? user.profileImage : df}
                     alt="" />
                 <span><b><Link to='/account' onClick={() => setAccount(user.id)}>{user.username}</Link></b></span>
             </div>

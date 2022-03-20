@@ -44,7 +44,7 @@ const App = () => {
             </AuthContext.Provider>)
         }
         else {
-            return (<AuthContext.Provider value={{ user, setUser, pubs, Eddit, users, addFollow, df, str }}>
+            return (<AuthContext.Provider value={{ user, setUser, pubs, setPubs, Eddit, users, addFollow, df, str }}>
                 <Main />
             </AuthContext.Provider>)
         }

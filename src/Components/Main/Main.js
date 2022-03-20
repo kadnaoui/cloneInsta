@@ -6,10 +6,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sugestions from './Content/Sugestions';
 import { Account } from './Content/Account';
 import Post from './Content/Post';
+import { Add } from './Content/Add';
 
 export const Main = () => {
 
-    const { setUser, user, df } = React.useContext(AuthContext);
+    const { setUser, user, df, pubs, setPubs } = React.useContext(AuthContext);
     const [account, setAccount] = React.useState(user.id);
     const [post, setPost] = React.useState(0);
 
@@ -21,6 +22,7 @@ export const Main = () => {
                 <Route path="/suggestions" element={<Sugestions setAccount={setAccount} account={account} />}></Route>
                 <Route path="/account" element={<Account account={account} setPost={setPost} />}></Route>
                 <Route path="/post" element={<Post post={post} setAccount={setAccount} setPost={setPost} />}></Route>
+                <Route path="/add" element={<Add pubs={pubs} setPubs={setPubs} user={user} />}></Route>
 
             </Routes>
 
