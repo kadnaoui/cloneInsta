@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/authContext'
 import './Account.css'
 
@@ -7,7 +7,8 @@ export const Account = (props) => {
 
 
     const { users, user, addFollow, df, pubs } = React.useContext(AuthContext);
-    const Account = props.account;
+    let { id } = useParams();
+    const Account = id;
 
     const follow = () => {
         let followers = user.followers;

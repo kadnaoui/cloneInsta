@@ -11,17 +11,17 @@ import { Add } from './Content/Add';
 export const Main = () => {
 
     const { setUser, user, df, pubs, setPubs } = React.useContext(AuthContext);
-    const [account, setAccount] = React.useState(user.id);
+
     const [post, setPost] = React.useState(0);
 
     return (
         <BrowserRouter>
-            <Navbar logout={setUser} user={user} df={df} setAccount={setAccount} />
+            <Navbar logout={setUser} user={user} df={df} />
             <Routes>
-                <Route path="/" element={<Content setAccount={setAccount} />}></Route>
-                <Route path="/suggestions" element={<Sugestions setAccount={setAccount} account={account} />}></Route>
-                <Route path="/account" element={<Account account={account} setPost={setPost} />}></Route>
-                <Route path="/post" element={<Post post={post} setAccount={setAccount} setPost={setPost} />}></Route>
+                <Route path="/" element={<Content />}></Route>
+                <Route path="/suggestions" element={<Sugestions />}></Route>
+                <Route path="/account/:id" element={<Account setPost={setPost} />}></Route>
+                <Route path="/post" element={<Post post={post} setPost={setPost} />}></Route>
                 <Route path="/add" element={<Add pubs={pubs} setPubs={setPubs} user={user} />}></Route>
 
             </Routes>

@@ -24,7 +24,7 @@ export const Navbar = (props) => {
                 <Link to="/suggestions" className="navigation-link" id='sug'>
                     <i className="fa fa-list" aria-hidden="true"></i>
                 </Link>
-                <Link to="/account" className="navigation-link" onClick={() => setAccount(user.id)}>
+                <Link to={`/account/${user.id}`} className="navigation-link" >
                     <img className='icon' id='nav_profile_Image' src={user.profileImage ? user.profileImage : df}></img>
                 </Link>
                 <Link to='/' id="signout" className="navigation-link" onClick={() => logout(0)}>

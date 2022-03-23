@@ -29,7 +29,7 @@ export const Add = (props) => {
             newpubs.push(x);
             setPubs(newpubs);
 
-            navigate("/account", { replace: true });
+            navigate(`/account/${user.id}`, { replace: true });
         }
     }
     const onChange = e => {

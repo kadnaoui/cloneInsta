@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const Sugestion = (props) => {
-    const { users, addFollow, user, df, setAccount, account } = props;
+    const { users, addFollow, user, df } = props;
 
 
     const follow = () => {
@@ -20,7 +20,7 @@ export const Sugestion = (props) => {
         <div className='sugggestion' >
             <div className='sinfo' >
                 <img src={users.profileImage ? users.profileImage : df} className='profilImg'></img>
-                <Link to='/account' onClick={() => setAccount(users.id)}>{users.username}</Link>
+                <Link to={`/account/${users.id}`} >{users.username}</Link>
             </div>
             <a className='follow' style={{ color: 'blue', cursor: 'pointer' }} onClick={follow}>{user.followers.find(x => x.id == users.id) ? 'Unfollow' : 'Follow'}</a>
         </div>

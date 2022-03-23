@@ -24,7 +24,7 @@ export const Search = (props) => {
     const displayOptions = () => {
         return results.map(x => {
             return (
-                <Link key={x.id} to='account' onClick={() => { setAccount(x.id); options('') }}>{x.username}</Link>
+                <Link key={x.id} to={`/account/${x.id}`} onClick={() => { options('') }}>{x.username}</Link>
 
             )
         })

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Comments } from './Comments'
 import { TopBar } from './TopBar';
 import { Time, showComments, LikeOp } from './PubsFunctions';
 import { MainImage } from './MainImage';
 const Publications = (props) => {
-    const { infos, Eddit, user, users, setAccount } = props;
+    const { infos, Eddit, user, users } = props;
     const idd = infos.id;
     const [comment, setComment] = React.useState('');
     const [dcomments, setDcomments] = React.useState(0);
@@ -26,7 +25,7 @@ const Publications = (props) => {
 
     return (
         <div className="container2">
-            <TopBar userId={infos.userId} users={users} setAccount={setAccount} />
+            <TopBar userId={infos.userId} users={users} />
 
             <MainImage src={infos.pubImage} />
             <div className="footer">
