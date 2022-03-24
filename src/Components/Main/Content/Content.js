@@ -11,7 +11,7 @@ const Content = (props) => {
         for (let index = 0; index < str.length; index++) {
 
             const element = str[index];
-            if (element.userId == c.id && element.stories.length > 0) return (<Storie key={element.id} infos={element} users={users} setAccount={props.setAccount} />)
+            if (element.userId == c.id && element.stories.length > 0) return (<Storie key={element.id} infos={element} users={users} df={df} />)
 
 
         }
@@ -19,7 +19,7 @@ const Content = (props) => {
     }
     const p = (c) => {
         return pubs.map(p => {
-            if (p.userId == c.id) { return (<Publications key={p.id} infos={p} Eddit={Eddit} user={user} users={users} setAccount={props.setAccount} />) }
+            if (p.userId == c.id) { return (<Publications key={p.id} infos={p} Eddit={Eddit} user={user} users={users} />) }
         })
     }
     const displayPubs = () => {
@@ -30,14 +30,15 @@ const Content = (props) => {
     }
     const displaySug = () => {
         let x = users.filter((c) => c.id != user.id);
-        return x.map((c) => (<Sugestion key={c.id} users={c} user={user} addFollow={addFollow} df={df} setAccount={props.setAccount} />))
+        return x.map((c) => (<Sugestion key={c.id} users={c} user={user} addFollow={addFollow} df={df} />))
     }
 
     return (
         <section className='home' >
 
             <div className='pubs'>
-                <div className='stories' ><AddStorie user={user} str={str} setStr={setStr} />{displayStories()}</div>
+                <div className='stories' ><AddStorie user={user} str={str} setStr={setStr} df={df} />{displayStories()}</div>
+
                 {displayPubs()}
             </div>
             <div className='suggestions'>

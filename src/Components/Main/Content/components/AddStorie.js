@@ -3,24 +3,33 @@ import { Modal } from '../../../Modal';
 import addImage from '../../icons/Add.jpg';
 import { useNavigate } from 'react-router-dom';
 export const AddStorie = (props) => {
-    const { str, user, setStr } = props;
+    const { str, user, setStr, df } = props;
     const [displayed, setDisplayed] = React.useState(-1)
     const [img, setImage] = React.useState(null)
     let navigate = useNavigate();
     const onSubmit = e => {
         e.preventDefault();
         if (img) {
-
-            let newStr = str.map(s => {
-                if (s.userId == user.id) { s.stories.push(img); }
-                return s;
-            });
-
-
-            setStr(newStr)
-            console.log(str);
-
-            navigate(`/`, { replace: true });
+            if (str.find(s => s.userId == user.id)) {
+                let newStr = str.map(s => {
+                    if (s.userId == user.id) { s.stories.push(img); }
+                    return s;
+                });
+                setStr(newStr)
+                navigate(`/`, { replace: true });
+                setDisplayed(-1)
+            }
+            else {
+                let newStr = {
+                    id: str.length,
+                    userId: user.id,
+                    stories: [img]
+                }
+                setStr([...str, newStr])
+                navigate(`/`, { replace: true });
+                setDisplayed(-1)
+            }
+            setImage(null)
         }
     }
     const onChange = e => {
@@ -43,7 +52,7 @@ export const AddStorie = (props) => {
                         <div className='strinfos'>
                             <div className='userInfos'>
                                 <div className='userInfos'>
-                                    <img className='profilImg' src={user.profileImage} />
+                                    <img className='profilImg' src={user.profileImage ? user.profileImage : df} />
                                     <a><b>{user.username}</b></a>
                                 </div>
 
@@ -56,9 +65,9 @@ export const AddStorie = (props) => {
                             <img className='upload' src={img} />
 
                             <input type="file" name="file" id="file" className="inputfile" onChange={onChange} />
-                            <label for="file">Choose a file</label>
-                            <input type="submit" id='submit' class="inputfile" />
-                            <label for="submit">upload</label>
+                            <label htmlFor="file">Choose a file</label>
+                            <input type="submit" id='submit' className="inputfile" />
+                            <label htmlFor="submit">upload</label>
 
                         </form>
                     </div>

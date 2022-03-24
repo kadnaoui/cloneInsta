@@ -37,7 +37,7 @@ export const Signinp = (props) => {
                         email: email,
                         password: 'x',
                         profileImage: '',
-                        followers: []
+                        followers: [{ id: l }]
 
                     })
                     navigate("/", { replace: true });

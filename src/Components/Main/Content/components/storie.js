@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal } from '../../../Modal';
 export const Storie = (props) => {
-    const { infos, users } = props;
+    const { infos, users, df } = props;
     const [displayed, setDisplayed] = React.useState(-1)
     const x = users.find(x => x.id == infos.userId)
     const next = () => {
@@ -27,7 +27,7 @@ export const Storie = (props) => {
                         <div className='strinfos'>
                             <div className='userInfos'>
                                 <div className='userInfos'>
-                                    <img className='profilImg' src={x.profileImage} />
+                                    <img className='profilImg' src={x.profileImage ? x.profileImage : df} />
                                     <a><b>{x.username}</b></a>
                                 </div>
 
@@ -45,7 +45,7 @@ export const Storie = (props) => {
     }
     return (
         <> <div className='profilImg2' >
-            <a onClick={() => setDisplayed(displayed + 1)} > <img className='profilImg' style={{ border: '0.2em solid red' }} src={x.profileImage} />
+            <a onClick={() => setDisplayed(displayed + 1)} > <img className='profilImg' style={{ border: '0.2em solid red' }} src={x.profileImage ? x.profileImage : df} />
             </a> </div >
             {showStorie()} </>
     )

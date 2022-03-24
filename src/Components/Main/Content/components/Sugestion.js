@@ -9,7 +9,7 @@ export const Sugestion = (props) => {
 
         let followers = user.followers;
         if (followers.find(x => x.id == users.id)) { addFollow(followers.filter(x => x.id != users.id), user.id); }
-        else { followers.push({ id: users.id }); addFollow(followers, user.id); }
+        else { followers.unshift({ id: users.id }); addFollow(followers, user.id); }
 
 
 

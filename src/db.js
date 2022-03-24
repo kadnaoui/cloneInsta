@@ -363,7 +363,7 @@ export const usersdb =
             email: "amin@gmail.com",
             password: 'y',
             profileImage: '',
-            followers: []
+            followers: [{ id: 1 }]
 
         },
         {
@@ -373,7 +373,7 @@ export const usersdb =
             email: "Abderrahimkdn@gmail.com",
             password: 'x',
             profileImage: '',
-            followers: []
+            followers: [{ id: 2 }]
 
         },
         {
@@ -383,7 +383,7 @@ export const usersdb =
             email: "Mbappe@gmail.com",
             password: 'x',
             profileImage: 'https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(webp):focal(1305x354:1307x352)/origin-imgresizer.eurosport.com/2022/02/13/3315958-67799428-2560-1440.jpg',
-            followers: []
+            followers: [{ id: 3 }]
 
         },
         {
@@ -393,7 +393,7 @@ export const usersdb =
             email: "Messi@gmail.com",
             password: 'x',
             profileImage: 'https://le10static.com/img/cache/article/624x351/0000/0020/202909.webp',
-            followers: []
+            followers: [{ id: 4 }]
 
         }
         ,
@@ -404,7 +404,7 @@ export const usersdb =
             email: "Ronaldo@gmail.com",
             password: 'x',
             profileImage: 'https://assets-fr.imgfoot.com/media/cache/642x382/cristiano-ronaldo-colere.jpg',
-            followers: []
+            followers: [{ id: 5 }]
 
         },
         {
@@ -414,7 +414,7 @@ export const usersdb =
             email: "Neymar@gmail.com",
             password: 'x',
             profileImage: 'https://media.gettyimages.com/photos/neymar-jr-of-paris-saintgermain-looks-on-during-the-uefa-champions-picture-id1211882540?k=20&m=1211882540&s=612x612&w=0&h=mgPLmredmBCMWIxADQYkVg6EMMwhjus9KxjqLj5k7iY=',
-            followers: []
+            followers: [{ id: 6 }]
 
         },
         {
@@ -424,7 +424,7 @@ export const usersdb =
             email: "Bale@gmail.com",
             password: 'x',
             profileImage: 'https://media.gettyimages.com/photos/gareth-bale-of-real-madrid-celebrates-scoring-his-sides-second-goal-picture-id962835634?k=20&m=962835634&s=612x612&w=0&h=2V-_omKKr8AsAh92mMdJD13i00wwPINUC-NqCGNtYUY=',
-            followers: []
+            followers: [{ id: 7 }]
 
         },
         {
@@ -434,7 +434,7 @@ export const usersdb =
             email: "Benzema@gmail.com",
             password: 'x',
             profileImage: 'https://media.gettyimages.com/photos/karim-benzema-of-real-madrid-celebrates-after-scoring-his-teams-first-picture-id1203378347?k=20&m=1203378347&s=612x612&w=0&h=QczbWT9Q-QmuozFAgEytqf8dIilPDTkPuBKHm4vuitY=',
-            followers: []
+            followers: [{ id: 8 }]
 
         },
         {
@@ -444,7 +444,7 @@ export const usersdb =
             email: "Xavi@gmail.com",
             password: 'x',
             profileImage: 'https://media.gettyimages.com/photos/xavi-hernandez-of-fc-barcelona-looks-on-during-the-la-liga-match-fc-picture-id180701871?s=2048x2048',
-            followers: []
+            followers: [{ id: 9 }]
 
         },
         {
@@ -454,7 +454,7 @@ export const usersdb =
             email: "Zidane@gmail.com",
             password: 'x',
             profileImage: 'https://le10static.com/img/cache/article/624x351/0000/0020/202909.webp',
-            followers: []
+            followers: [{ id: 10 }]
 
         },
         {
@@ -464,7 +464,7 @@ export const usersdb =
             email: "casillas@gmail.com",
             password: 'x',
             profileImage: 'https://media.gettyimages.com/photos/iker-casillas-of-real-madrid-in-action-during-the-la-liga-match-real-picture-id96470722?k=20&m=96470722&s=612x612&w=0&h=72ScgfzW74x4QVTUik-SaQasHGb-Zvh-7IyDiQuATAU=',
-            followers: []
+            followers: [{ id: 11 }]
 
         }
     ];

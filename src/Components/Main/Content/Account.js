@@ -40,7 +40,7 @@ export const Account = (props) => {
                     <div className='details'> {x.username} {user.id != Account ? (<a className='follow' style={{ color: 'blue', cursor: 'pointer' }} onClick={follow}>{user.followers.find(x => x.id == Account) ? 'Unfollow' : 'Follow'}</a>) : ''}</div>
                     <div className='details'>
                         <div>Posts <span><b>{y.length}</b></span></div>
-                        <div>following <span><b>{x.followers.length}</b></span></div>
+                        <div>following <span><b>{x.followers.length - 1}</b></span></div>
 
                     </div>
                     <div className='details'><b>{x.fullname}</b> </div>
