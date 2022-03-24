@@ -3,9 +3,10 @@ import Publications from './components/publications';
 import { Storie } from './components/storie';
 import { Sugestion } from './components/Sugestion';
 import { AuthContext } from '../../../Contexts/authContext';
+import { AddStorie } from './components/AddStorie';
 
 const Content = (props) => {
-    const { user, pubs, Eddit, users, addFollow, df, str } = React.useContext(AuthContext);
+    const { user, pubs, Eddit, users, addFollow, df, str, setStr } = React.useContext(AuthContext);
     const s = (c) => {
         for (let index = 0; index < str.length; index++) {
 
@@ -36,7 +37,7 @@ const Content = (props) => {
         <section className='home' >
 
             <div className='pubs'>
-                <div className='stories' >{displayStories()}</div>
+                <div className='stories' ><AddStorie user={user} str={str} setStr={setStr} />{displayStories()}</div>
                 {displayPubs()}
             </div>
             <div className='suggestions'>

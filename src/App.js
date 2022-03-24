@@ -34,7 +34,7 @@ const App = () => {
     const [pubs, setPubs] = React.useState(pubsdb);
     const [user, setUser] = React.useState(0);
     const [users, setUsers] = React.useState(usersdb);
-    const [str, setstr] = React.useState(strdb);
+    const [str, setStr] = React.useState(strdb);
 
     const display = () => {
         if (user == 0) {
@@ -44,7 +44,7 @@ const App = () => {
             </AuthContext.Provider>)
         }
         else {
-            return (<AuthContext.Provider value={{ user, setUser, pubs, setPubs, Eddit, users, addFollow, df, str }}>
+            return (<AuthContext.Provider value={{ user, setUser, pubs, setPubs, Eddit, users, addFollow, df, str, setStr }}>
                 <Main />
             </AuthContext.Provider>)
         }
