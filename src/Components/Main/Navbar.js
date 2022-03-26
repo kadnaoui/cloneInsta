@@ -19,7 +19,7 @@ export const Navbar = (props) => {
                     <i className="fa fa-home" aria-hidden="true"></i>
                 </Link>
                 <Link to="/add" className="navigation-link" >
-                    <i className="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <i className="fa fa-plus-square" aria-hidden="true"></i>
                 </Link>
                 <Link to="/suggestions" className="navigation-link" id='sug'>
                     <i className="fa fa-list" aria-hidden="true"></i>
