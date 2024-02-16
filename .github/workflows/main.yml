@@ -1,0 +1,34 @@
+name: Send Release Event to Noibu
+
+on:
+ push:
+  branches:
+   - main
+jobs:
+ test:
+  runs-on: ubuntu-latest
+
+steps:
+- name: Checkout code
+  uses: actions/checkout@v4
+
+- name: Set Current Time
+  run: echo "CURRENT_TIME=$(date -u +'%Y-%m-%d %H:%M:%S+00:00')" >> $GITHUB_ENV
+
+- name: Set Title
+  env:
+      TITLE: ${{ github.event.pull_request.base.ref }}
+  run: echo "TITLE=$TITLE" >> $GITHUB_ENV
+
+- name: Set Description
+  env:
+      DESCRIPTION: ${{ github.event.pull_request.title }}
+  run: echo "DESCRIPTION=$DESCRIPTION" >> $GITHUB_ENV
+
+- name: Display All Variables
+  run: |
+    echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+    echo "🕒 Current Time: $CURRENT_TIME"
+    echo "🏷️ Title: $TITLE"
+    echo "📝 Description: $DESCRIPTION"
+    env | sort
