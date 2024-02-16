@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Display Branches and PR Title
+      - name: Display Branches and PR Title ....
         env:
             TITLE: ${{ github.event.pull_request.title }}
             BRANCH: ${{ github.head_ref }}
