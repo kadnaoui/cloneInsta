@@ -15,7 +15,7 @@ jobs:
         env:
             TITLE: ${{ github.event.pull_request.title }}
             BRANCH: ${{ github.head_ref }}
-            DESCRIPTION: ${{ github.event.pull_request.title }}
+            DESCRIPTION: ${{ github.event.pull_request.description }}
         run: |
           echo "Compare Branch: $TITLE"
           echo "PR Title: $BRANCH" 
