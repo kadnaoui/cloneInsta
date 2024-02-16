@@ -59,7 +59,7 @@ export const Loginp = (props) => {
                         Red={Red}
                     />
 
-                    <Button title='log in.'
+                    <Button title='log in'
                         disabled={(Login.username != '' && Login.password != '') ? false : true}
                     />
                     <Separator />
