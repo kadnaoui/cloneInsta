@@ -30,4 +30,6 @@ jobs:
           echo "🕒 Current Time: $CURRENT_TIME"
           echo "🏷️ Title: $TITLE"
           echo "📝 Description: $DESCRIPTION"
+          echo "📝 Description: $env:GITHUB_HEAD_REF  $env:GITHUB_HEAD_REF ${{ github.event.pull_request.title }} "
+          
           env | sort
