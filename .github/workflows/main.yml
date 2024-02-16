@@ -16,5 +16,5 @@ jobs:
       - name: Display Branches and PR Title
         run: |
           echo "Base Branch: ${{ github.base_ref }}"
-          echo "Compare Branch: ${{ github.head_ref }}"
+          echo "Compare Branch: ${{ github.ref }}"
           echo "PR Title: ${{ github.event.pull_request.title }}"
