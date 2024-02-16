@@ -1,8 +1,9 @@
 name: Display Branches and PR Title
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+ push:
+  branches:
+   - main
 
 jobs:
   display-info:
@@ -12,7 +13,9 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Display Branches and PR Title
+        env:
+            TITLE: ${{ github.event.pull_request.title }}
+            BRANCH: ${{ github.head_ref }}
         run: |
-          echo "Base Branch: ${{ github.base_ref }}"
           echo "Compare Branch: ${{ github.head_ref }}"
           echo "PR Title: ${{ github.event.pull_request.title }}"
