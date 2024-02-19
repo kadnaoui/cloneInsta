@@ -30,4 +30,4 @@ jobs:
           echo "Compare Branch: $TITLE"
           echo "PR Title: $BRANCH"
           echo "Merge Status: $STATUS"
-          echo "PR label: ${{ github.event.pull_request.labels.*.name }}"
+          echo "PR label: ${{ join(github.event.pull_request.labels.*.name, ', ') }}"
