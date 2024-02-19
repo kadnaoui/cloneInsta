@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    types: [ labeled ]
+    types: [labeled]
 
 jobs:
   build:
@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world! ${{ github.event.label.name }} ${{ github.event.pull_request.labels.*.name }}
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: |
+          label_string=""
+          for label in "${{ github.event.pull_request.labels.*.name }}"; do
+            if [ -z "$label_string" ]; then
+              label_string="$label"
+            else
+              label_string="$label_string, $label"
+            fi
+          done
+          echo "Labels: $label_string"
