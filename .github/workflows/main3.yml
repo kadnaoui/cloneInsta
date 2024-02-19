@@ -2,11 +2,11 @@ name: CI
 
 on:
   pull_request:
-    types: [ closed ]
+    types: [ labeled ]
 
 jobs:
   build:
-    if: ${{ github.event.label.name == 'bug' }}
+    if: ${{ github.event.labels.*.name == 'bug' }}
     runs-on: ubuntu-latest
 
     steps:
