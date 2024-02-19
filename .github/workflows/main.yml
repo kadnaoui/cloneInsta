@@ -25,10 +25,9 @@ jobs:
             TITLE: ${{ github.event.pull_request.title }}
             BRANCH: ${{ github.head_ref }}
             STATUS: ${{ steps.set-status.outputs.status }}
-            PR_LABELS: ${{ github.event.pull_request.labels.*.name }}
 
         run: |
           echo "Compare Branch: $TITLE"
           echo "PR Title: $BRANCH"
           echo "Merge Status: $STATUS"
-          echo "PR label: $PR_LABELS"
+          echo "PR label: ${{ github.event.pull_request.labels.*.name }}"
