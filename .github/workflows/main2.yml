@@ -9,8 +9,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Input Variables
+        id: input_vars
+        run: |
+          echo "::set-output name=component::${{ env.INPUT_COMPONENT }}"
+          echo "::set-output name=title::${{ env.INPUT_TITLE }}"
+          echo "::set-output name=description::${{ env.INPUT_DESCRIPTION }}"
+          echo "::set-output name=status::${{ env.INPUT_STATUS }}"
+          echo "::set-output name=version::${{ env.INPUT_VERSION }}"
+        env:
+          INPUT_COMPONENT: ${{ github.event.inputs.component }}
+          INPUT_TITLE: ${{ github.event.inputs.title }}
+          INPUT_DESCRIPTION: ${{ github.event.inputs.description }}
+          INPUT_STATUS: ${{ github.event.inputs.status }}
+          INPUT_VERSION: ${{ github.event.inputs.version }}
       - name: Display Branches and PR Title
         run: |
-          echo "Compare Branch: dxgfhed"
-          echo "PR Title: dhdhg"
-          echo "Merge Status: dghdgh"
+          echo "Component: ${{ steps.input_vars.outputs.component }}"
+          echo "Title: ${{ steps.input_vars.outputs.title }}"
+          echo "Description: ${{ steps.input_vars.outputs.description }}"
+          echo "Status: ${{ steps.input_vars.outputs.status }}"
+          echo "Version: ${{ steps.input_vars.outputs.version }}"
