@@ -5,7 +5,7 @@ on:
     inputs:
       component:
         type: string
-        description: 'Component name'
+        description: 'Component -What piece of your site did you release?-'
         required: true
       title:
         type: string
@@ -14,7 +14,6 @@ on:
       description:
         type: string
         description: 'Description -Details about the release. Value can be “null”-'
-        required: true
       status:
         type: choice
         description: 'Status'
@@ -33,6 +32,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set Current Time
+        run: echo "CURRENT_TIME=$(date -u +'%Y-%m-%d %H:%M:%S+00:00')" >> $GITHUB_ENV
       
       - name: Display Inputs
         run: |
@@ -41,3 +43,4 @@ jobs:
           echo "Description: ${{ github.event.inputs.description }}"
           echo "Status: ${{ github.event.inputs.status }}"
           echo "Version: ${{ github.event.inputs.version }}"
+          echo "time : '"$CURRENT_TIME"'"
