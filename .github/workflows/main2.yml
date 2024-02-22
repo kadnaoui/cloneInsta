@@ -1,32 +1,41 @@
-name: Manual Workflow
+name: Mixed inputs
 
 on:
-  workflow_dispatch:  # This event triggers the workflow manually
+  workflow_dispatch:
+    inputs:
+      component:
+        type: string
+        description: 'Component name'
+        required: true
+      title:
+        type: string
+        description: 'Title of the message'
+        required: true
+      description:
+        type: string
+        description: 'Description of the message'
+        required: true
+      status:
+        type: string
+        description: 'Status of the message'
+        required: true
+      version:
+        type: string
+        description: 'Version of the message'
+        required: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Input Variables
-        id: input_vars
+      
+      - name: Display Inputs
         run: |
-          echo "::set-output name=component::${{ env.INPUT_COMPONENT }}"
-          echo "::set-output name=title::${{ env.INPUT_TITLE }}"
-          echo "::set-output name=description::${{ env.INPUT_DESCRIPTION }}"
-          echo "::set-output name=status::${{ env.INPUT_STATUS }}"
-          echo "::set-output name=version::${{ env.INPUT_VERSION }}"
-        env:
-          INPUT_COMPONENT: ${{ github.event.inputs.component }}
-          INPUT_TITLE: ${{ github.event.inputs.title }}
-          INPUT_DESCRIPTION: ${{ github.event.inputs.description }}
-          INPUT_STATUS: ${{ github.event.inputs.status }}
-          INPUT_VERSION: ${{ github.event.inputs.version }}
-      - name: Display Branches and PR Title
-        run: |
-          echo "Component: ${{ steps.input_vars.outputs.component }}"
-          echo "Title: ${{ steps.input_vars.outputs.title }}"
-          echo "Description: ${{ steps.input_vars.outputs.description }}"
-          echo "Status: ${{ steps.input_vars.outputs.status }}"
-          echo "Version: ${{ steps.input_vars.outputs.version }}"
+          echo "Component: ${{ github.event.inputs.component }}"
+          echo "Title: ${{ github.event.inputs.title }}"
+          echo "Description: ${{ github.event.inputs.description }}"
+          echo "Status: ${{ github.event.inputs.status }}"
+          echo "Version: ${{ github.event.inputs.version }}"
