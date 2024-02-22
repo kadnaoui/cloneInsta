@@ -1,4 +1,4 @@
-name: Mixed inputs
+name: Manual Send Release Event to Noibu
 
 on:
   workflow_dispatch:
@@ -9,19 +9,21 @@ on:
         required: true
       title:
         type: string
-        description: 'Title of the message'
+        description: 'Title -Summary of the release-'
         required: true
       description:
         type: string
-        description: 'Description of the message'
+        description: 'Description -Details about the release. Value can be “null”-'
         required: true
       status:
-        type: string
-        description: 'Status of the message'
-        required: true
+        type: choice
+        description: 'Status'
+        options: 
+         - success
+         - failled
       version:
         type: string
-        description: 'Version of the message'
+        description: 'Version -ticket ID-'
         required: true
 
 jobs:
